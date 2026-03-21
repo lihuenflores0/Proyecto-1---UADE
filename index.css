@@ -5,7 +5,6 @@ body{
 header{
   background-color: #208a39;
   padding: 20px;
-  text-align: center;
   color: white;
 }
 main{
@@ -14,7 +13,22 @@ main{
 h1{
   font-size: 50px;
   margin-bottom: 20px;
+  text-align: center;
 }
 h2{
   font-size: 35px;
+  text-align: center;
+  
+}
+
+#cardanfitrion{
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+#cardcanada1{
+  background-image:url(img/Flag_of_Canada_\(Pantone\).svg.png);
+  background-size: cover;
+  background-position: center;
 }
