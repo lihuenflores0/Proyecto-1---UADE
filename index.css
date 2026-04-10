@@ -1,106 +1,85 @@
-/* --- 1. Base --- */
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
   background-color: #f8f9fa;
 }
 
-/* --- 2. Navegación (Header/Menú) --- */
-#menu {
-  background-color: #000000;
-  display: flex;
-  align-items: center; /* Centra verticalmente los elementos del menú */
-  padding: 0.5rem 3rem; /* Espaciado interno para que no quede pegado a los bordes */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra debajo del menú para darle profundidad */
-}
-
-/* Contenedor del logo y el título */
-#logo {
-  display: flex;
-  align-items: center; /* Alinea el logo y el texto en la misma línea horizontal */
-  gap: 1rem; /* Espacio entre el logo y la palabra 11Mundial */
-  margin: 0;
-  padding: 0;
-}
-
-#imglogo {
-  height: 5rem; /* Reducido para que el menú no quede excesivamente gigante */
-  width: auto;
-}
-
-#titulo {
-  font-size: 32px;
-  margin: 0; /* Quitamos márgenes para que flexbox lo centre perfectamente */
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#menulista {
-  margin-left: auto; /* Esto empuja automáticamente toda la lista de navegación a la derecha */
-}
-
-#listainicio {
-  list-style: none;
-  display: flex;
-  gap: 2.5rem;
-  margin: 0;
-  padding: 0;
-}
-
-#listainicio li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 1.2rem;
-  font-weight: 500;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-#listainicio li a:hover {
-  color: #e03a3e; /* Color rojo del logo al pasar el mouse */
-}
-
-/* --- 3. Contenedor Principal y Fondo --- */
 main {
-  /* Se agrega un linear-gradient semitransparente negro para oscurecer la imagen y que el texto resalte */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./img/hardgol.png");
+  padding: 20px;
+  background-image: url(./img/hardgol.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   margin: 0;
-  min-height: calc(100vh - 6rem); /* Ocupa el resto de la pantalla descontando el menú */
+  height: 100vh;
+}
+
+#titulo{
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(248, 246, 246);
+    margin-top: 1rem;
+    padding: auto;
+}
+#infogeneral h1{
+    color: #ffffff;
+    text-align: center;
+    font-size: 50px;
+}
+
+#menu {
+  background-color: black;
   display: flex;
-  align-items: center; /* Centra verticalmente la información */
-  justify-content: center; /* Centra horizontalmente la información */
-  padding: 20px;
-  box-sizing: border-box;
+  justify-content: left;
 }
 
-/* --- 4. Información General (Texto sobre el estadio) --- */
-#infogeneral {
+#logo {
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: #ffffff; /* Todo el texto dentro de este contenedor será blanco por defecto */
+  justify-content: center;
 }
 
-#infogeneral h1 {
-  font-size: 55px;
-  margin: 0 0 10px 0;
-  color: #ffffff;
-  /* Sombra de texto para asegurar que se lea perfecto sin importar la imagen */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+#imglogo {
+  width: 8rem;
+  height: 10rem;
 }
 
-/* Agrego esto asumiendo que "CANADA - ESTADOS UNIDOS..." son etiquetas <p> o <h2> */
-#infogeneral p, 
-#infogeneral h2, 
-#infogeneral h3 {
-  color: #ffffff;
+
+#menulista {
+  margin: auto;
+  margin-left: 15rem;
+}
+
+#listainicio {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+#listainicio li a {
+  text-decoration: none;
+  color: white;
   font-size: 1.2rem;
-  margin: 10px 0;
-  max-width: 800px; /* Evita que el texto sea muy largo de lado a lado */
-  line-height: 1.5;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+#listainicio li a:hover {
+  color: #e03a3e;
+}
+
+#listainicio li a {
+  text-decoration: none;
+  color: white;
+  font-size: xx-large;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(62, 61, 169);
+    padding: 10px;
 }
