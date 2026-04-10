@@ -6,6 +6,13 @@ body {
 
 main {
   padding: 20px;
+  background-image: url(./img/hardgol.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  height: 100vh;
 }
 
 h1 {
