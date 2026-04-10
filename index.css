@@ -28,6 +28,10 @@ main {
     text-align: center;
     font-size: 50px;
 }
+#infogeneral h2{
+    text-align: center;
+    color: white;
+}
 
 #menu {
   background-color: black;
@@ -82,4 +86,7 @@ footer{
     text-align: center;
     background-color: rgb(62, 61, 169);
     padding: 10px;
+}
+hr{
+    width: 100%;
 }
