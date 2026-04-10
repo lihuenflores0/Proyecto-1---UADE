@@ -78,8 +78,41 @@ main {
   font-size: xx-large;
 }
 
-footer{
+h2 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 80px;
+}
+
+#cardcanada {
+  background-color: rgba(142, 141, 141, 0.8);
+  border-radius: 10px;
+  padding: 40px;
+  align-items: center;
+  margin: 20px auto;
+  width: 300px;
+  text-align: center;
+}
+#canbad{
+  width: 50%;
+  height: auto;
+  margin-top: 10px;
+}
+#cardeeuu{
+    background-color: rgba(220, 220, 220, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    margin: 20px auto;
+    width: 300px;
     text-align: center;
-    background-color: rgb(62, 61, 169);
-    padding: 10px;
+}
+#cardmex{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    margin: 20px auto;
+    width: 300px;
+    text-align: center;
 }
