@@ -1,47 +1,56 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
     <link href="index.css" rel="stylesheet" />
-    <title>OnceMundial</title>
+    <title>11Mundial</title>
   </head>
   <body>
     <header>
-      <div id="menu">
-        <div id="logo">
-          <a href="./index.html"
-            ><img src="img/logomundial.png" alt="" id="imglogo"
-          /></a>
-          <div id="titulo">
-            <h1>11Mundial</h1>
-          </div>
-        </div>
-        <div id="menulista">
-          <ul id="listainicio">
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="./clasificacion.html">Clasificacion</a></li>
-            <li><a href="equipos.html">Equipos</a></li>
-            <li>
-              <a href="./paisesyciudades.html">Paises y ciudades anfitrionas</a>
-            </li>
-          </ul>
+      <div id="logo-titulo">
+        <a href="./index.html"><img src="img/logomundial.png" alt="Logo" id="imglogo" /></a>
+        <div id="titulo">
+          <h1>11Mundial</h1>
         </div>
       </div>
+
+      <div id="menulista">
+        <ul id="listainicio">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./grupos.html">Grupos</a></li>
+          <li><a href="./anfitriones.html">Anfitriones</a></li>
+        </ul>
+      </div>
     </header>
+
     <main>
-    <div id="infogeneral">
-      <h1>Copa Mundial 2026</h1>
-      <H2 id="sedes"> CANADA . ESTADOS UNIDOS . MEXICO </H2>
-    </div>
-        <hr>
+      <div id="infogeneral">
+        <h1>Copa Mundial 2026</h1>
+        <h2 id="sedes">CANADA . ESTADOS UNIDOS . MEXICO</h2>
+        <a href="#seccion-cupos" class="btn-cupos">Cupos</a>
+      </div>
     </main>
+
+    <div id="seccion-cupos">
+      <div class="contenido-cupos">
+        <h2>Cupos por Federaciones</h2>
+        <hr class="linea-corta">
+        <ul id="lista-cupos">
+          <li><strong>UEFA (Europa):</strong> 16 plazas directas</li>
+          <li><strong>CAF (África):</strong> 9 plazas directas + 1 repechaje</li>
+          <li><strong>AFC (Asia):</strong> 8 plazas directas + 1 repechaje</li>
+          <li><strong>CONMEBOL (Sudamérica):</strong> 6 plazas directas + 1 repechaje</li>
+          <li><strong>CONCACAF (Norte/Centroamérica):</strong> 6 plazas (incluye anfitriones) + 2 repechajes</li>
+          <li><strong>OFC (Oceanía):</strong> 1 plaza directa + 1 repechaje</li>
+        </ul>
+      </div>
+    </div>
+
     <footer>
-        <p>Informacion actualizada sobre la copa mundial fifa 2026</p>
+        <p>Información actualizada sobre la Copa Mundial FIFA 2026</p>
     </footer>
   </body>
 </html>
