@@ -12,8 +12,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 5%; /* Padding muy reducido para que no quede grueso */
-  border-bottom: 1px solid #222222; /* Línea separadora muy sutil */
+  padding: 15px 5%; /* Padding aumentado para dar más altura al nav */
+  border-bottom: 1px solid #222222;
 }
 
 #logo-titulo {
@@ -22,7 +22,7 @@ header {
 }
 
 #imglogo {
-  height: 45px; /* Logo pequeño para obligar al menú a ser más delgado */
+  height: 80px; /* Logo más grande */
   width: auto;
   margin-right: 15px;
 }

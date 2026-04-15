@@ -1,0 +1,113 @@
+/* Estilos básicos de la página */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Header copiado de las otras páginas */
+header {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  border-bottom: 1px solid #222222;
+}
+
+#logo-titulo {
+  display: flex;
+  align-items: center;
+}
+
+#imglogo {
+  height: 80px;
+  width: auto;
+  margin-right: 15px;
+}
+
+#titulo h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+#menulista {
+  margin: 0;
+}
+
+#listainicio {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+#listainicio li a {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 16px;
+}
+
+#listainicio li a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* Main */
+main {
+  padding: 30px;
+  background-color: #111111;
+  min-height: 80vh;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.linea-simple {
+  width: 50%;
+  border: 1px solid #444;
+  margin-bottom: 30px;
+}
+
+/* Cajas de Grupos muy simples hechas con inline-block */
+.contenedor-grupos {
+  text-align: center;
+}
+
+.grupo-caja {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  margin: 15px;
+  padding: 15px;
+  background-color: #222222;
+  border: 1px solid #444444;
+  text-align: left;
+}
+
+.grupo-caja h3 {
+  margin-top: 0;
+  border-bottom: 1px solid #555;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.grupo-caja ul {
+  padding-left: 20px;
+}
+
+.grupo-caja li {
+  margin-bottom: 8px;
+}
+
+/* Footer simple */
+footer {
+  background-color: #050505;
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #222;
+}
