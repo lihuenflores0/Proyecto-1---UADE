@@ -12,68 +12,58 @@
   </head>
   <body>
     <header>
-      <div id="menu">
-        <div id="logo">
-          <a href="./index.html"
-            ><img src="img/logomundial.png" alt="" id="imglogo"
-          /></a>
-          <div id="titulo">
-            <h1>11Mundial</h1>
-          </div>
+      <div id="logo-titulo">
+        <a href="./index.html"><img src="img/logomundial.png" alt="Logo" id="imglogo" /></a>
+        <div id="titulo">
+          <h1>11Mundial</h1>
         </div>
-        <div id="menulista">
-          <ul id="listainicio">
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="./clasificacion.html">Clasificacion</a></li>
-            <li><a href="equipos.html">Equipos</a></li>
-            <li>
-              <a href="./paisesyciudades.html">Paises y ciudades anfitrionas</a>
-            </li>
-          </ul>
-        </div>
+      </div>
+
+      <div id="menulista">
+        <ul id="listainicio">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./clasificacion.html">Clasificación</a></li>
+          <li><a href="./equipos.html">Equipos</a></li>
+          <li><a href="./paisesyciudades.html">Sedes</a></li>
+        </ul>
       </div>
     </header>
     <main>
       <h2>Países Anfitriones</h2>
-      <hr size="6" width="100%" align="left" color="white" />
-      <div id="cardanfitrion">
+      <hr style="border: 2px solid white; width: 50%; margin: 0 auto; margin-bottom: 40px;" />
+      <div id="cardanfitrion" style="text-align: center;">
         
-        <div id="cardcanada">
-          <a href="/TarjetaPaises/canada.html" id="bancad"">
-            <div id="cardcanada1">
-              <p>País afitrion</p>
-              <img src="img/canbad.png" alt="Canadá" id="canbad" />
-              <h3> Canadá</h3>
-            </div>
-            <div>
+        <div class="card-pais" id="cardcanada">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <p class="etiqueta-anfitrion">País anfitrión</p>
+            <img src="img/canbad.png" alt="Canadá" class="img-bandera" />
+            <h3>Canadá</h3>
+            <div class="datos-pais">
               <p>Fase: Grupo B</p>
-              <p>Participaciones:2</p>
+              <p>Participaciones: 2</p>
             </div>
           </a>
         </div>
 
-        <div id="cardeeuu">
-          <a href="">
-            <div>
-              <p>País afitrion</p>
-              <h3>EE.UU.</h3>
-            </div>
-
-            <div>
+        <div class="card-pais" id="cardeeuu">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <p class="etiqueta-anfitrion">País anfitrión</p>
+            <!-- Dejo alt por si no hay imagen -->
+            <img src="img/usabad.png" alt="EE.UU." class="img-bandera" />
+            <h3>EE.UU.</h3>
+            <div class="datos-pais">
               <p>Fase: Grupo D</p>
               <p>Participaciones: 11</p>
             </div>
           </a>
         </div>
 
-        <div id="cardmex">
-          <a href="">
-            <div>
-              <p>País afitrion</p>
-              <h3>Mexico</h3>
-            </div>
-
-            <div>
+        <div class="card-pais" id="cardmex">
+          <a href="#" style="text-decoration: none; color: inherit;">
+            <p class="etiqueta-anfitrion">País anfitrión</p>
+            <img src="img/mexbad.png" alt="México" class="img-bandera" />
+            <h3>México</h3>
+            <div class="datos-pais">
               <p>Fase: Grupo A</p>
               <p>Participaciones: 17</p>
             </div>

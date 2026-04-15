@@ -1,40 +1,84 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link href="index.css" rel="stylesheet" />
-    <title>OnceMundial</title>
+    <link href="paises.css" rel="stylesheet" />
+    <title>Sedes | 11Mundial</title>
   </head>
   <body>
     <header>
-      <div id="menu">
-        <div id="logo">
-          <a href="./index.html"
-            ><img src="/img/logomundial.png" alt="" id="imglogo"
-          /></a>
+      <div id="logo-titulo">
+        <a href="./index.html"><img src="img/logomundial.png" alt="Logo" id="imglogo" /></a>
+        <div id="titulo">
+          <h1>11Mundial</h1>
+        </div>
+      </div>
 
-          <div id="titulo">
-            <h1>11Mundial</h1>
-          </div>
+      <div id="menulista">
+        <ul id="listainicio">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./clasificacion.html">Clasificación</a></li>
+          <li><a href="./equipos.html">Equipos</a></li>
+          <li><a href="./paisesyciudades.html">Sedes</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <h1>Ciudades Anfitrionas 2026</h1>
+      <hr style="border: 1px solid #555; width: 60%; margin: 10px auto 40px auto;" />
+
+      <div class="contenedor-sedes">
+        <!-- MÉXICO -->
+        <div class="columna-pais" id="col-mexico">
+          <h2>México</h2>
+          <img src="img/mexbad.png" alt="Bandera México" class="img-sede-bandera" />
+          <ul class="lista-ciudades">
+            <li>Ciudad de México (Estadio Azteca)</li>
+            <li>Guadalajara (Estadio Akron)</li>
+            <li>Monterrey (Estadio BBVA)</li>
+          </ul>
         </div>
 
-        <div id="menulista">
-          <ul id="listainicio">
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="./clasificacion.html">Clasificacion</a></li>
-            <li><a href="equipos.html">Equipos</a></li>
-            <li>
-              <a href="./paisesyciudades.html">Paises y ciudades anfitrionas</a>
-            </li>
+        <!-- ESTADOS UNIDOS -->
+        <div class="columna-pais" id="col-eeuu">
+          <h2>Estados Unidos</h2>
+          <img src="img/usabad.png" alt="Bandera EE.UU." class="img-sede-bandera" />
+          <ul class="lista-ciudades">
+            <li>Nueva York / Nueva Jersey</li>
+            <li>Los Ángeles (SoFi Stadium)</li>
+            <li>Dallas (AT&T Stadium)</li>
+            <li>Miami (Hard Rock Stadium)</li>
+            <li>Atlanta (Mercedes-Benz Stadium)</li>
+            <li>Boston</li>
+            <li>Filadelfia</li>
+            <li>Houston</li>
+            <li>Seattle</li>
+            <li>Kansas City</li>
+            <li>San Francisco Bay Area</li>
+          </ul>
+        </div>
+
+        <!-- CANADÁ -->
+        <div class="columna-pais" id="col-canada">
+          <h2>Canadá</h2>
+          <img src="img/canbad.png" alt="Bandera Canadá" class="img-sede-bandera" />
+          <ul class="lista-ciudades">
+            <li>Toronto (BMO Field)</li>
+            <li>Vancouver (BC Place)</li>
           </ul>
         </div>
       </div>
-    </header>
-    <main></main>
+    </main>
+
+    <footer>
+      <p>Información actualizada sobre la Copa Mundial FIFA 2026</p>
+    </footer>
   </body>
 </html>
