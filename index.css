@@ -5,7 +5,7 @@ body {
   color: #212529;
 }
 
-/* --- HEADER Y NAVEGACIÓN --- */
+/* Header y nav*/
 header {
   background-color: rgba(248, 249, 250, 0.85);
   display: flex;
@@ -60,7 +60,7 @@ header {
   color: #C9082A;
 }
 
-/* --- MAIN (Imagen de fondo principal) --- */
+
 main {
   background-image: url(./img/hardgol.png);
   background-size: cover;
@@ -267,10 +267,10 @@ main {
 
 
 
-/* --- SECCIÓN DE CUPOS (Pantalla completa al bajar) --- */
+/* Cupos en pagina principal*/
 #seccion-cupos {
   background-color: #212529;
-  height: 90vh; /* Ocupa rigurosamente toda tu pantalla */
+  height: 90vh; /* Seccion con medida para que ocupemos la la pantalla */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -336,10 +336,6 @@ footer {
   background: lightgray;
 }
 
-/* mover slides */
-#s1:checked ~ .slides { transform: translateX(0); }
-#s2:checked ~ .slides { transform: translateX(-100%); }
-#s3:checked ~ .slides { transform: translateX(-200%); }
 
 /* botones */
 .nav {
