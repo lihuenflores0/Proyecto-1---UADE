@@ -115,12 +115,22 @@ main {
 
 #contenido{
   background-color: #050505; 
-  height: 70vh;
+  height: 73vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   gap: 7rem;
+}
+#contenido1{
+  background-color: #212529; 
+  height: 73vh;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  text-align: left;
+  gap: 7rem;
+  padding-right: 40px;
 }
 
 .descripcion {
@@ -128,22 +138,49 @@ main {
   padding: 0;
   font-size: 20px;
   line-height: 2.5;
-  max-width: 750px;
+  max-width: 700px;
   text-align: center;
   color: #dddddd;
+}
+#descripcion1-l{
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+  line-height: 2.5;
+  max-width: 700px;
+  color: #dddddd;
+  padding-right: 40px;
+
+}
+.descripcion1 {
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+  line-height: 2.5;
+  max-width: 700px;
+  color: #dddddd;
+  
 }
 
 #imgmessi{
   background-image: url(/img/GettyImages-1450300303.webp);
   background-size: cover;
   background-position: center;
-  height: 30rem;
-  width: 40rem;
+  height: 25rem;
+  width: 42rem;
   margin-right: 20px;
-  border-radius: 24px;
+  border-radius: 8px;
 }
-
-.descripcion1 {
+#imgfestejo{
+  background-image: url(/img/festejo.png);
+  background-size: cover;
+  background-position: center;
+  height: 28rem;
+  width: 42rem;
+  margin-left: 20px;
+  border-radius: 8px;
+}
+.descripcion2 {
   height: 45vh;
   list-style: none;
   padding: 0;
@@ -154,9 +191,9 @@ main {
   text-align: center;
   color: #000000;
 }
-.descripcion h2 {
+.descripcion2 h2 {
   font-size: 36px;
-  margin-top: 0;
+  margin-top: 50px;
 }
 
 .contenedor-sedes {
