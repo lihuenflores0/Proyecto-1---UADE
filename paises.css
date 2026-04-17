@@ -53,6 +53,7 @@ header {
   font-size: 20px;
   font-weight: 500;
   transition: color 0.3s;
+  
 }
 
 #listainicio li a:hover {
@@ -153,3 +154,9 @@ footer {
   border-top: 1px solid #6C757D;
   color: #212529;
 }
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
