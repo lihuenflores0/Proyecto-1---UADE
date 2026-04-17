@@ -1,0 +1,164 @@
+/* --- ESTILOS GENERALES --- */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #F8F9FA;
+  color: #212529;
+}
+
+/* --- HEADER Y NAVEGACIÓN --- */
+header {
+  background-color: rgba(248, 249, 250, 0.85);
+  display: flex; /* Mantenido para el header por consistencia */
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  border-bottom: 3px solid #C9082A;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+#logo-titulo {
+  display: flex;
+  align-items: center;
+}
+
+#imglogo {
+  height: 100px;
+  width: auto;
+  margin-right: 15px;
+}
+
+#titulo h1 {
+  font-size: 28px;
+  margin: 0;
+  color: #212529;
+}
+
+#menulista {
+  margin: 0;
+}
+
+#listainicio {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+#listainicio li a {
+  text-decoration: none;
+  color: #6C757D;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+#listainicio li a:hover {
+  color: #C9082A;
+}
+
+/* --- MAIN Y SEDES --- */
+main {
+  background-color: #050505;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 50px 20px;
+  min-height: calc(100vh - 56px);
+  text-align: center;
+}
+
+#titulo{
+    color: white;
+}
+
+.linea-corta {
+  width: 80px;
+  border: 2px solid #C9082A;
+  margin: 20px auto 40px auto;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.partidos {
+  max-width: 900px;
+  margin: auto;
+}
+
+.dia {
+  margin-bottom: 30px;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.encabezado h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.encabezado a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+
+.partido {
+  background-color: #eaeaea;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.equipos {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  text-align: center;
+}
+
+.equipos span:first-child {
+  text-align: right;
+}
+
+.equipos span:last-child {
+  text-align: left;
+}
+
+.equipos strong {
+  font-size: 20px;
+  padding: 0 15px;
+}
+
+.partido p {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+}
+
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  background-color: #F8F9FA;
+  padding: 20px;
+  margin: 0;
+  border-top: 1px solid #6C757D;
+  color: #212529;
+}

@@ -159,6 +159,7 @@ main {
   line-height: 2.5;
   max-width: 700px;
   color: #dddddd;
+  text-align: center;
   
 }
 
@@ -172,7 +173,7 @@ main {
   border-radius: 8px;
 }
 #imgfestejo{
-  background-image: url(/img/festejo.png);
+  background-image: url(./img/13634229482532e3670bcf71c621d3cba2f00c4955c3d59wjpg.avif);
   background-size: cover;
   background-position: center;
   height: 28rem;
@@ -311,4 +312,47 @@ footer {
   margin: 0;
   border-top: 1px solid #6C757D;
   color: #212529;
+}
+
+
+.carrusel {
+  width: 300px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  transition: transform 0.5s;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 40px;
+  text-align: center;
+  background: lightgray;
+}
+
+/* mover slides */
+#s1:checked ~ .slides { transform: translateX(0); }
+#s2:checked ~ .slides { transform: translateX(-100%); }
+#s3:checked ~ .slides { transform: translateX(-200%); }
+
+/* botones */
+.nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.nav label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: gray;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 50%;
 }
