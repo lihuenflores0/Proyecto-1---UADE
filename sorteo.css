@@ -81,7 +81,7 @@ form {
     display: flex;
     flex-direction: column; /* Apila los elementos verticalmente */
     gap: 15px; /* Añade espacio entre cada elemento */
-    padding: 40px;
+    padding: 20px 40px 40px 40px;
 }
 
 /* Si quieres que las etiquetas (label) también estén sobre el input */
