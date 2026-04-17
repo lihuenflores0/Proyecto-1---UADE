@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #F8F9FA;
+  color: #212529;
+}
+
+/* Header y nav*/
+header {
+  background-color: rgba(248, 249, 250, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%; /* Padding aumentado para dar más altura al nav */
+  border-bottom: 3px solid #C9082A;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+#logo-titulo {
+  display: flex;
+  align-items: center;
+}
+
+#imglogo {
+  height: 100px; /* Logo más grande */
+  width: auto;
+  margin-right: 15px;
+}
+
+#titulo h1 {
+  font-size: 28px;
+  margin: 0;
+  color: #212529;
+}
+
+#menulista {
+  margin: 0;
+}
+
+#listainicio {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+#listainicio li a {
+  text-decoration: none;
+  color: #6C757D;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+#listainicio li a:hover {
+  color: #C9082A;
+}
+
+
+main {
+  background-image: url(./img/hardgol.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  /* 100vh (viewport height) menos los ~55px que ocupa el menú, para que encaje perfecto sin generar scroll extra */
+  height: calc(100vh - 56px); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+    background-color: #F8F9FA;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    gap: 15px; /* Añade espacio entre cada elemento */
+    padding: 40px;
+}
+
+/* Si quieres que las etiquetas (label) también estén sobre el input */
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  background-color: #F8F9FA;
+  padding: 20px;
+  margin: 0;
+  border-top: 1px solid #6C757D;
+  color: #212529;
+}
+
+/* botones */
+.nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.nav label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: gray;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+}
