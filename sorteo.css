@@ -84,7 +84,7 @@ form {
     padding: 40px;
 }
 
-/* Si quieres que las etiquetas (label) también estén sobre el input */
+
 form label {
     display: block;
     margin-bottom: 5px;
