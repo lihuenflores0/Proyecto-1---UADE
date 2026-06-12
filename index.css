@@ -60,6 +60,48 @@ header {
   color: #C9082A;
 }
 
+#contador2{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#countdown {
+    justify-content: center;
+    gap: 20px;
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 20px;
+    width: 410px;
+}
+
+.bloque {
+    text-align: center;
+    min-width: 80px;
+}
+
+.bloque span {
+    display: block;
+    font-size: 52px;
+    font-weight: bold;
+    color: #F8F9FA;
+    text-shadow: 2px 2px 5px #ffff;
+}
+
+.bloque p {
+    margin: 4px 0 0 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #C9082A;
+}
+
+#texto-countdown {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 18px;
+  color: #ffff;
+}
 
 main {
   background-image: url(./img/hardgol.png);
