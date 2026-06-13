@@ -24,8 +24,5 @@ function sorteo() {
     document.getElementById("cartel").classList.remove("oculto");
 }
 
-function cerrarCartel() {
-    document.getElementById("cartel").classList.add("oculto");
-}
 
 document.getElementById("btn-participar").addEventListener("click", sorteo);
