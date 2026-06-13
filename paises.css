@@ -7,7 +7,7 @@ body {
 
 header {
   background-color: rgba(248, 249, 250, 0.85);
-  display: flex; /* Mantenido para el header por consistencia */
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 5%;
@@ -53,11 +53,75 @@ header {
   font-size: 20px;
   font-weight: 500;
   transition: color 0.3s;
-  
 }
 
 #listainicio li a:hover {
   color: #C9082A;
+}
+
+/* Hamburguesa */
+#menu-toggle {
+  display: none;
+}
+
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburguesa span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #212529;
+  border-radius: 3px;
+}
+
+/* Contador */
+#countdown {
+  justify-content: center;
+  gap: 20px;
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 10px 15px;
+  width: 280px;
+}
+
+#contador2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bloque {
+  text-align: center;
+  min-width: 50px;
+}
+
+.bloque span {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  color: #F8F9FA;
+  text-shadow: 2px 2px 5px #ffff;
+}
+
+.bloque p {
+  margin: 2px 0 0 0;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #C9082A;
+}
+
+#texto-countdown {
+  text-align: center;
+  margin: 5px 0;
+  font-size: 12px;
+  color: #ffff;
 }
 
 main {
@@ -84,13 +148,13 @@ main h1 {
 }
 
 .columna-pais {
-  display: inline-block; /* Alternativa simple y pura a flex/grid */
+  display: inline-block;
   vertical-align: top;
   width: 30%;
   min-width: 280px;
   margin: 15px;
   padding: 30px 20px;
-  background-color: #eaeaea; /* Fondo oscuro liso */
+  background-color: #eaeaea;
   border: 1px solid #6C757D;
   border-radius: 12px;
   text-align: left;
@@ -124,7 +188,7 @@ main h1 {
 }
 
 .lista-ciudades {
-  list-style: none; 
+  list-style: none;
   padding: 0;
   margin-top: 20px;
 }
@@ -145,7 +209,6 @@ main h1 {
   color: #F8F9FA;
 }
 
-
 footer {
   text-align: center;
   background-color: #F8F9FA;
@@ -155,8 +218,89 @@ footer {
   color: #212529;
 }
 
-a{
+a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
 
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    padding: 10px 5%;
+    gap: 10px;
+  }
+
+  #imglogo {
+    height: 60px;
+  }
+
+  #titulo h1 {
+    font-size: 20px;
+  }
+
+  .hamburguesa {
+    display: flex;
+  }
+
+  #menulista {
+    display: none;
+    width: 100%;
+    order: 3;
+  }
+
+  #menu-toggle:checked ~ #menulista {
+    display: block;
+  }
+
+  #listainicio {
+    flex-direction: column;
+    gap: 0;
+    background-color: rgba(248, 249, 250, 0.97);
+    border-top: 1px solid #dee2e6;
+  }
+
+  #listainicio li a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  #countdown {
+    display: none;
+  }
+
+  main {
+    padding: 30px 15px;
+    background-attachment: scroll;
+  }
+
+  main h1 {
+    font-size: 32px;
+  }
+
+  .columna-pais {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  main h1 {
+    font-size: 26px;
+  }
+
+  .columna-pais {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+
+  .lista-ciudades li {
+    font-size: 14px;
+  }
+}

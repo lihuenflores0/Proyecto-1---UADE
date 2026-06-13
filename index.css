@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 5%; /* Padding aumentado para dar más altura al nav */
+  padding: 15px 5%; 
   border-bottom: 3px solid #C9082A;
   position: sticky;
   top: 0;
@@ -25,7 +25,7 @@ header {
 }
 
 #imglogo {
-  height: 100px; /* Logo más grande */
+  height: 100px; 
   width: auto;
   margin-right: 15px;
 }
@@ -60,47 +60,26 @@ header {
   color: #C9082A;
 }
 
-#contador2{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+/* Hamburguesa (oculta en desktop) */
+#menu-toggle {
+  display: none;
 }
 
-#countdown {
-    justify-content: center;
-    gap: 20px;
-    background-color: #000000;
-    border-radius: 8px;
-    padding: 20px;
-    width: 410px;
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 5px;
 }
 
-.bloque {
-    text-align: center;
-    min-width: 80px;
-}
-
-.bloque span {
-    display: block;
-    font-size: 52px;
-    font-weight: bold;
-    color: #F8F9FA;
-    text-shadow: 2px 2px 5px #ffff;
-}
-
-.bloque p {
-    margin: 4px 0 0 0;
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #C9082A;
-}
-
-#texto-countdown {
-  text-align: center;
-  margin: 10px 0;
-  font-size: 18px;
-  color: #ffff;
+.hamburguesa span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #212529;
+  border-radius: 3px;
+  transition: 0.3s;
 }
 
 main {
@@ -110,16 +89,60 @@ main {
   background-position: center;
   background-attachment: fixed;
   margin: 0;
-  /* 100vh (viewport height) menos los ~55px que ocupa el menú, para que encaje perfecto sin generar scroll extra */
   height: calc(100vh - 56px); 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#infogeneral {
+#countdown {
+  justify-content: center;
+  gap: 20px;
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 20px;
+  width: 410px;
+}
+
+#contador2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bloque {
   text-align: center;
-  width: 100%;
+  min-width: 80px;
+}
+
+.bloque span {
+  display: block;
+  font-size: 52px;
+  font-weight: bold;
+  color: #F8F9FA;
+  text-shadow: 2px 2px 5px #ffff;
+}
+
+.bloque p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #C9082A;
+}
+
+#texto-countdown {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 18px;
+  color: #ffff;
+}
+
+#infogeneral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 #infogeneral h1 {
@@ -127,14 +150,15 @@ main {
   margin: 0 0 10px 0;
   text-shadow: 2px 2px 5px #212529;
   color: #F8F9FA;
+  text-align: center;
 }
 
 #infogeneral h2 {
   font-size: 24px;
   margin: 0 0 40px 0;
-  letter-spacing: 2px; /* Separa un poco las letras para que sea más legible */
-  color: #F8F9FA;
+  letter-spacing: 2px; 
   text-shadow: 2px 2px 5px #212529;
+  text-align: center;
 }
 
 .btn-cupos {
@@ -148,6 +172,7 @@ main {
   border: 2px solid #F8F9FA;
   border-radius: 5px;
   transition: 0.3s;
+  margin-bottom: 30px;
 }
 
 .btn-cupos:hover {
@@ -155,23 +180,26 @@ main {
   color: #000000;
 }
 
-#contenido{
+#contenido {
   background-color: #050505; 
-  height: 73vh;
+  min-height: 73vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   gap: 7rem;
+  padding: 60px 40px;
 }
-#contenido1{
+
+#contenido1 {
   background-color: #212529; 
-  height: 73vh;
+  min-height: 73vh;
   display: flex;
   justify-content: right;
   align-items: center;
   text-align: left;
   gap: 7rem;
+  padding: 60px 40px;
   padding-right: 40px;
 }
 
@@ -184,7 +212,8 @@ main {
   text-align: center;
   color: #dddddd;
 }
-#descripcion1-l{
+
+#descripcion1-l {
   list-style: none;
   padding: 0;
   font-size: 20px;
@@ -192,8 +221,8 @@ main {
   max-width: 700px;
   color: #dddddd;
   padding-right: 40px;
-
 }
+
 .descripcion1 {
   list-style: none;
   padding: 0;
@@ -202,10 +231,13 @@ main {
   max-width: 700px;
   color: #dddddd;
   text-align: center;
-  
 }
 
-#imgmessi{
+#sedes {
+  color: #ffffff;
+}
+
+#imgmessi {
   background-image: url(/img/GettyImages-1450300303.webp);
   background-size: cover;
   background-position: center;
@@ -213,8 +245,10 @@ main {
   width: 42rem;
   margin-right: 20px;
   border-radius: 8px;
+  flex-shrink: 0;
 }
-#imgfestejo{
+
+#imgfestejo {
   background-image: url(./img/13634229482532e3670bcf71c621d3cba2f00c4955c3d59wjpg.avif);
   background-size: cover;
   background-position: center;
@@ -222,11 +256,13 @@ main {
   width: 42rem;
   margin-left: 20px;
   border-radius: 8px;
+  flex-shrink: 0;
 }
+
 .descripcion2 {
-  height: 45vh;
+  min-height: 45vh;
   list-style: none;
-  padding: 0;
+  padding: 40px 20px;
   font-size: 20px;
   line-height: 2;
   max-width: 750px;
@@ -234,6 +270,7 @@ main {
   text-align: center;
   color: #000000;
 }
+
 .descripcion2 h2 {
   font-size: 36px;
   margin-top: 50px;
@@ -245,13 +282,13 @@ main {
 }
 
 .columna-pais {
-  display: inline-block; /* Alternativa simple y pura a flex/grid */
+  display: inline-block; 
   vertical-align: top;
   width: 30%;
   min-width: 280px;
   margin: 15px;
   padding: 30px 20px;
-  background-color: #18171c; /* Fondo oscuro liso */
+  background-color: #18171c; 
   border: 1px solid #6C757D;
   border-radius: 12px;
   text-align: left;
@@ -272,7 +309,6 @@ main {
   color: #F8F9FA;
 }
 
-/* Colores específicos en hovers u detalles */
 #col-mexico h2 { border-bottom-color: #C9082A; }
 #col-eeuu h2 { border-bottom-color: #C9082A; }
 #col-canada h2 { border-bottom-color: #C9082A; }
@@ -286,7 +322,7 @@ main {
 }
 
 .lista-ciudades {
-  list-style: none; /* Elimina viñetas clásicas */
+  list-style: none;
   padding: 0;
   margin-top: 20px;
 }
@@ -307,16 +343,14 @@ main {
   color: #F8F9FA;
 }
 
-
-
-/* Cupos en pagina principal*/
 #seccion-cupos {
   background-color: #212529;
-  height: 90vh; /* Seccion con medida para que ocupemos la la pantalla */
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 60px 20px;
 }
 
 .contenido-cupos {
@@ -346,7 +380,6 @@ main {
   color: #F8F9FA;
 }
 
-/* --- FOOTER --- */
 footer {
   text-align: center;
   background-color: #F8F9FA;
@@ -355,7 +388,6 @@ footer {
   border-top: 1px solid #6C757D;
   color: #212529;
 }
-
 
 .carrusel {
   width: 300px;
@@ -378,8 +410,6 @@ footer {
   background: lightgray;
 }
 
-
-/* botones */
 .nav {
   text-align: center;
   margin-top: 10px;
@@ -393,4 +423,183 @@ footer {
   margin: 5px;
   cursor: pointer;
   border-radius: 50%;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    flex-wrap: wrap;
+    padding: 10px 5%;
+    gap: 10px;
+  }
+
+  #imglogo {
+    height: 60px;
+  }
+
+  #titulo h1 {
+    font-size: 20px;
+  }
+
+  .hamburguesa {
+    display: flex;
+  }
+
+  #menulista {
+    display: none;
+    width: 100%;
+    order: 3;
+  }
+
+  #menu-toggle:checked ~ #menulista {
+    display: block;
+  }
+
+  #listainicio {
+    flex-direction: column;
+    gap: 0;
+    background-color: rgba(248, 249, 250, 0.97);
+    border-top: 1px solid #dee2e6;
+  }
+
+  #listainicio li a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  /* Main hero */
+  main {
+    height: auto;
+    min-height: calc(100vh - 80px);
+    padding: 40px 20px;
+    background-attachment: scroll;
+  }
+
+  #infogeneral h1 {
+    font-size: 36px;
+    padding: 0 10px;
+  }
+
+  #infogeneral h2 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 0 10px;
+  }
+
+  /* Contador */
+  #countdown {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px;
+  }
+
+  .bloque span {
+    font-size: 36px;
+  }
+
+  .bloque {
+    min-width: 60px;
+  }
+
+  .bloque p {
+    font-size: 10px;
+  }
+
+  #texto-countdown {
+    font-size: 13px;
+  }
+
+  /* Secciones de contenido */
+  #contenido {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 40px 20px;
+  }
+
+  #contenido1 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 40px 20px;
+  }
+
+  #imgmessi, #imgfestejo {
+    width: 100%;
+    height: 220px;
+    margin: 0;
+  }
+
+  .descripcion, .descripcion1 {
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  #descripcion1-l {
+    font-size: 16px;
+    line-height: 2;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .descripcion2 {
+    font-size: 16px;
+    padding: 30px 20px;
+  }
+
+  .descripcion2 h2 {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  /* Sedes */
+  .columna-pais {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+  }
+
+  /* Cupos */
+  #lista-cupos {
+    font-size: 15px;
+    line-height: 2;
+    padding: 0 10px;
+  }
+
+  .contenido-cupos h2 {
+    font-size: 26px;
+  }
+}
+
+/* Mobile (480px) */
+@media (max-width: 480px) {
+  #infogeneral h1 {
+    font-size: 28px;
+  }
+
+  #infogeneral h2 {
+    font-size: 12px;
+  }
+
+  .btn-cupos {
+    font-size: 15px;
+    padding: 10px 25px;
+  }
+
+  #countdown {
+    max-width: 280px;
+  }
+
+  .bloque span {
+    font-size: 28px;
+  }
+
+  .bloque {
+    min-width: 50px;
+  }
 }

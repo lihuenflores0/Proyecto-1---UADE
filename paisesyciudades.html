@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,6 +21,30 @@
         </div>
       </div>
 
+      <div id="countdown">
+          <p id="texto-countdown">Cuenta regresiva para la final del Mundial 2026</p>
+          <div id="contador2">
+            <div class="bloque">
+              <span id="contador-dias">00</span>
+              <p>Días</p>
+            </div>
+            <div class="bloque">
+              <span id="contador-horas">00</span>
+              <p>Horas</p>
+            </div>
+            <div class="bloque">
+              <span id="contador-minutos">00</span>
+              <p>Minutos</p>
+            </div>
+            <div class="bloque">
+              <span id="contador-segundos">00</span>
+              <p>Segundos</p>
+            </div>
+          </div>
+        </div>
+
+      <label class="hamburguesa" for="menu-toggle"><span></span><span></span><span></span></label>
+      <input type="checkbox" id="menu-toggle" />
       <div id="menulista">
         <ul id="listainicio">
           <li><a href="./index.html">Inicio</a></li>
@@ -80,5 +105,6 @@
     <footer>
       <p>Información actualizada sobre la Copa Mundial FIFA 2026</p>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>

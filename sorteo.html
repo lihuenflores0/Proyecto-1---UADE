@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
@@ -19,6 +20,30 @@
         </div>
       </div>
 
+      <div id="countdown">
+          <p id="texto-countdown">Cuenta regresiva para la final del Mundial 2026</p>
+          <div id="contador2">
+            <div class="bloque">
+              <span id="contador-dias">00</span>
+              <p>Días</p>
+            </div>
+            <div class="bloque">
+              <span id="contador-horas">00</span>
+              <p>Horas</p>
+            </div>
+            <div class="bloque">
+              <span id="contador-minutos">00</span>
+              <p>Minutos</p>
+            </div>
+            <div class="bloque">
+              <span id="contador-segundos">00</span>
+              <p>Segundos</p>
+            </div>
+          </div>
+        </div>
+
+      <label class="hamburguesa" for="menu-toggle"><span></span><span></span><span></span></label>
+      <input type="checkbox" id="menu-toggle" />
       <div id="menulista">
         <ul id="listainicio">
           <li><a href="./index.html">Inicio</a></li>
@@ -30,22 +55,31 @@
     </header>
 
     <main>
-      <form action="">
+      <div id="menu-sorteo">
         <h1>Datos personales:</h1>
-        <label for="">Ingresa tu Mail:</label>
-        <input type="email" name="Ingresa tu mail" id="form-mail">
-        <label for="">Nombre:</label>
-        <input type="text" name="" id="form-name">
-        <label for="">Apellido:</label>
-        <input type="text" name="" id="form-apellido">
-        <label for="">Pais de residencia:</label>
-        <input type="text" name="" id="form-pais">
-        <input type="submit" value="Participar">
-      </form>
+        <form>
+          <label>Ingresa tu Mail:</label>
+          <input type="email" name="Ingresa tu mail" id="form-mail">
+          <label>Nombre:</label>
+          <input type="text" name="" id="form-name">
+          <label>Apellido:</label>
+          <input type="text" name="" id="form-apellido">
+          <label>Pais de residencia:</label>
+          <input type="text" name="" id="form-pais">
+          <input  type="button" id="btn-participar"value="participar">
+        </form>
+
+        <div id="cartel" class="oculto">
+          <p>🎉 FELICIDADES, YA ESTÁS PARTICIPANDO POR UNA ENTRADA</p>
+          <p>Se te enviará un mail si eres el ganador.</p>
+          <button onclick="cerrarCartel()" ><a href="/index.html">Cerrar</a></button>
+        </div>
+      </div>
     </main>
 
     <footer>
         <p>Información actualizada sobre la Copa Mundial FIFA 2026</p>
     </footer>
+    <script src="index.js"></script>
   </body>
-</html> 
+</html>
