@@ -1,103 +1,80 @@
-/*contador*/
-const FECHA_MUNDIAL = new Date("2026-07-19T16:00:00");
-
-setInterval(function() {
-    const ahora = new Date();
-    const diferencia = FECHA_MUNDIAL - ahora;
-
-    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-
-    document.getElementById("contador-dias").textContent = String(dias).padStart(2, 0);
-    document.getElementById("contador-horas").textContent = String(horas).padStart(2, 0);
-    document.getElementById("contador-minutos").textContent = String(minutos).padStart(2, 0);
-    document.getElementById("contador-segundos").textContent = String(segundos).padStart(2, 0);
-
-}, 1000);
 
 
-/*boton participar*/
+/* Todo el código jQuery va dentro de document.ready, así nos
+   aseguramos de que la página haya terminado de cargar antes
+   de manipular los elementos. */
+$(document).ready(function () {
 
-function sorteo() {
-    const formulario = document.getElementById("form-sorteo");
+  /* ---------- 1) Mostrar las secciones (efecto aparecer) ----------
+     En el CSS, los elementos con clase "reveal" arrancan invisibles
+     (opacity: 0). Al agregarles la clase "visible", aparecen con una
+     transición suave que ya está definida en el CSS. */
+  $(".reveal").addClass("visible");
 
-    /* Validación nativa del navegador (required + tipo email) */
-    if (!formulario.reportValidity()) {
-        return;
+
+  /* ---------- 2) Animar las barras del gráfico de cupos ----------
+     Cada barra guarda su valor en data-valor y el máximo en data-max.
+     Recorremos todas las barras y le calculamos el ancho en porcentaje.
+     El efecto de "llenado" lo hace solo el CSS (transition: width). */
+  $(".barra-directas, .barra-repechaje").each(function () {
+    let valor = $(this).attr("data-valor");   // cuánto vale esa barra
+    let max = $(this).attr("data-max");        // el máximo de la escala
+    let porcentaje = (valor / max) * 100;      // regla de tres simple
+    $(this).css("width", porcentaje + "%");    // le aplicamos el ancho
+  });
+
+
+  /* ---------- 3) Botón "Participar" del sorteo (validación) ----------
+     Leemos los 4 campos del formulario. Si alguno está vacío,
+     avisamos. Si están todos completos, mostramos el cartel de éxito. */
+  $("#btn-participar").click(function () {
+    let mail = $("#form-mail").val();
+    let nombre = $("#form-name").val();
+    let apellido = $("#form-apellido").val();
+    let pais = $("#form-pais").val();
+
+    // El || significa "o": si CUALQUIERA está vacío, entra al if
+    if (mail == "" || nombre == "" || apellido == "" || pais == "") {
+      alert("Por favor completá todos los campos para participar.");
+    } else {
+      $("#cartel").fadeIn();   // muestra el cartel con un desvanecido
     }
-
-    /* Refuerzo: rechaza campos que solo tienen espacios en blanco */
-    const campos = formulario.querySelectorAll("input[required]");
-    let hayCampoVacio = false;
-
-    campos.forEach(function (campo) {
-        if (campo.value.trim() === "") {
-            hayCampoVacio = true;
-            campo.classList.add("input-error");
-        } else {
-            campo.classList.remove("input-error");
-        }
-    });
-
-    if (hayCampoVacio) {
-        return;
-    }
-
-    document.getElementById("cartel").classList.remove("oculto");
-}
-
-const btnParticipar = document.getElementById("btn-participar");
-if (btnParticipar) {
-    btnParticipar.addEventListener("click", sorteo);
-}
+  });
 
 
-/* Gráfico animado de Cupos por Federaciones */
+  /* ---------- 4) Cuenta regresiva para la final ----------
+     setInterval repite el bloque cada 1000 ms (1 segundo).
+     Calculamos cuánto falta y lo mostramos en cada bloque. */
+  setInterval(function () {
+    let fechaMundial = new Date("2026-07-19T16:00:00");  // día de la final
+    let ahora = new Date();                               // momento actual
+    let diferencia = fechaMundial - ahora;                // milisegundos que faltan
 
-function animarGraficoCupos() {
-    const barras = document.querySelectorAll(".barra-directas, .barra-repechaje");
+    // Pasamos los milisegundos a días, horas, minutos y segundos.
+    // parseInt corta los decimales (nos quedamos con la parte entera).
+    let segundosTotales = parseInt(diferencia / 1000);
+    let dias = parseInt(segundosTotales / 86400);             // 86400 seg = 1 día
+    let horas = parseInt((segundosTotales % 86400) / 3600);   // 3600 seg = 1 hora
+    let minutos = parseInt((segundosTotales % 3600) / 60);    // 60 seg = 1 min
+    let segundos = segundosTotales % 60;
 
-    barras.forEach(function (barra) {
-        const valor = Number(barra.dataset.valor);
-        const max = Number(barra.dataset.max);
-        const porcentaje = (valor / max) * 100;
-        barra.style.width = porcentaje + "%";
-    });
-}
+    // Mostramos cada número en su lugar (con dos dígitos)
+    $("#contador-dias").text(dosDigitos(dias));
+    $("#contador-horas").text(dosDigitos(horas));
+    $("#contador-minutos").text(dosDigitos(minutos));
+    $("#contador-segundos").text(dosDigitos(segundos));
+  }, 1000);
 
-const graficoCupos = document.getElementById("grafico-cupos");
-
-if (graficoCupos) {
-    const observerCupos = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                animarGraficoCupos();
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.3 });
-
-    observerCupos.observe(graficoCupos);
-}
+});
 
 
-/* Animaciones al hacer scroll (reveal) */
-
-const elementosReveal = document.querySelectorAll(".reveal");
-
-if (elementosReveal.length > 0) {
-    const observerReveal = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.15 });
-
-    elementosReveal.forEach(function (el) {
-        observerReveal.observe(el);
-    });
+/* ---------- Función auxiliar ----------
+   Si el número es menor a 10, le agrega un 0 adelante
+   (para que se vea "05" en vez de "5"). Devuelve el resultado. */
+function dosDigitos(numero) {
+  if (numero < 10) {
+    return "0" + numero;
+  } else {
+    return numero;
+  }
 }
